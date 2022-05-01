@@ -6,8 +6,10 @@ import java.util.Locale;
 //Given a String, determine  if it is a palindrome, considering only alphanumeric chars and ignoring cases
 public class ValidPalindrome {
     public static void main(String[] args) {
-        String result = "RacecaR";
-        System.out.println(isPalindrome(result));
+        String result1 = "RacecaR";
+        System.out.println(isPalindrome(result1));
+        String result2 = "abcddcba";
+        System.out.println(isPalindromeAl(result2));
     }
     public static boolean isPalindrome(String s) {
         String fixed_char = "";
@@ -28,4 +30,18 @@ public class ValidPalindrome {
         }
         return true;
     }
+    public static boolean isPalindromeAl(String s) {
+        int right = 0;
+        int left = s.length() - 1;
+        while (right < left) {
+            if (s.charAt(right) != s.charAt(left)) {
+                return false;
+            }
+            right ++;
+            left --;
+        }
+        return true;
+    }
+
+
 }
