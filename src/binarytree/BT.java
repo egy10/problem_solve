@@ -27,6 +27,8 @@ public class BT {
         bt.postorder(root);
 
         System.out.println("Sum of nodes:  " + bt.getSumOfNodes(root));
+
+        System.out.println("The difference: " + bt.getDifferenceEvenOddVal(root));
     }
 
     public static class Node {
@@ -78,6 +80,13 @@ public class BT {
                 return 0;
             }
             return node.data + getSumOfNodes(node.right) + getSumOfNodes(node.left);
+        }
+// Difference of the even and odd elements using recursion
+        public int getDifferenceEvenOddVal(Node node) {
+            if (node == null) {
+                return 0;
+            }
+            return node.data - getDifferenceEvenOddVal(node.left) - getDifferenceEvenOddVal(node.right);
         }
 
     }
