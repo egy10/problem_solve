@@ -29,6 +29,8 @@ public class BT {
         System.out.println("Sum of nodes:  " + bt.getSumOfNodes(root));
 
         System.out.println("The difference: " + bt.getDifferenceEvenOddVal(root));
+
+        System.out.println("The total number of nodes : " + bt.getNumberOfNodes(root));
     }
 
     public static class Node {
@@ -87,6 +89,14 @@ public class BT {
                 return 0;
             }
             return node.data - getDifferenceEvenOddVal(node.left) - getDifferenceEvenOddVal(node.right);
+        }
+// get number of nodes in a BT
+
+        public int getNumberOfNodes(Node node) {
+            if (node == null) {
+                return 0;
+            }
+            return 1 + getNumberOfNodes(node.left) + getNumberOfNodes(node.right);
         }
 
     }
