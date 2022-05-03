@@ -29,6 +29,9 @@ public class BTtwo {
         System.out.println("Level 4: ");
         binaryTree.printAtGivenLevel(root, 4);
 
+        System.out.println("The level order of traversal" );
+        binaryTree.levelOrderTraversalUsingRecursion(root);
+
     }
     public static class Node {
         int data;
@@ -86,6 +89,18 @@ public class BTtwo {
             printAtGivenLevel(node.left, level - 1);
             printAtGivenLevel(node.right, level - 1);
         }
+ // Print element in Level order using recursion
+            public void levelOrderTraversalUsingRecursion(Node node) {
+                if (node == null){
+                return;
+                }
+                int height = getHeightOfTree(node);
+                for (int i = 0; i <= height; i++) {
+                    printAtGivenLevel(node, i + 1);
+                    System.out.println();
+                }
+
+            }
     }
 
 
