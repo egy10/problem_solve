@@ -11,7 +11,7 @@ public class TwoNumberSum {
         System.out.println("The output: " + result[0] + ", " + result[1]);
     }
     public static int[] twoNumberSum(int[] arr, int target) {
-        Set<Integer> set = new HashSet<>();
+        Set<Integer> set = new HashSet<Integer>();
         for (int i = 0; i <= arr.length; i++) {
             int myPair = target - arr[i];
 

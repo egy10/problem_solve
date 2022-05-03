@@ -12,12 +12,22 @@ public class BTtwo {
         root.left.right.left = binaryTree.createNewNode(5);
         root.left.right.right = binaryTree.createNewNode(11);
         root.right.right = binaryTree.createNewNode(9);
+        root.right.right.left = binaryTree.createNewNode(4);
 
         System.out.println();
         binaryTree.inorder(root);
 
         System.out.println("Number of leaf nodes: " + binaryTree.getNumberOfLeafNodes(root));
         System.out.println("Get height tree: " + binaryTree.getHeightOfTree(root));
+
+        System.out.println("Level 1: ");
+        binaryTree.printAtGivenLevel(root, 1);
+        System.out.println("Level 2: ");
+        binaryTree.printAtGivenLevel(root, 2);
+        System.out.println("Level 3: ");
+        binaryTree.printAtGivenLevel(root, 3);
+        System.out.println("Level 4: ");
+        binaryTree.printAtGivenLevel(root, 4);
 
     }
     public static class Node {
@@ -64,5 +74,19 @@ public class BTtwo {
          private int max(int a, int b) {
             return a > b ? a : b;
          }
+ // Print elements at given level in BT
+        public void printAtGivenLevel(Node node, int level) {
+            if (node == null) {
+                return;
+            }
+            if (level == 1) {
+                System.out.println(node.data);
+                return;
+            }
+            printAtGivenLevel(node.left, level - 1);
+            printAtGivenLevel(node.right, level - 1);
+        }
     }
+
+
 }
