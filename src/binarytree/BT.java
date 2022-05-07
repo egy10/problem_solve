@@ -1,6 +1,7 @@
 package binarytree;
 
-import com.sun.source.tree.BinaryTree;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BT {
     public static void main(String[] args) {
@@ -98,6 +99,5 @@ public class BT {
             }
             return 1 + getNumberOfNodes(node.left) + getNumberOfNodes(node.right);
         }
-
     }
 }
