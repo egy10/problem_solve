@@ -29,7 +29,7 @@ public class BTtwo {
         System.out.println("Level 4: ");
         binaryTree.printAtGivenLevel(root, 4);
 
-        System.out.println("The level order of traversal" );
+        System.out.println("The level order");
         binaryTree.levelOrderTraversalUsingRecursion(root);
 
     }
