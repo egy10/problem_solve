@@ -1,10 +1,5 @@
 package problemsFifty.binaryTree;
 
-import binarytree.BTtwo;
-
-import javax.xml.soap.Node;
-import java.util.List;
-
 public class NodeDepths {
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
@@ -18,10 +13,6 @@ public class NodeDepths {
         root.right.right = binaryTree.createNewNode(9);
         root.right.right.left = binaryTree.createNewNode(4);
         System.out.println();
-
-
-
-
 
     }
     public static class Node{
@@ -38,8 +29,7 @@ public class NodeDepths {
             n.right = null;
             return n;
         }
-        public static int nodeDepths(Node root) {
-            return nodeDepthHelper(root, 0);
+        public static int nodeDepths(Node root) { return nodeDepthHelper(root, 0);
         }
         public static int nodeDepthHelper(Node tree, int level) {
             if (tree == null) {
@@ -49,3 +39,6 @@ public class NodeDepths {
         }
     }
 }
+// Distance between a node in a BT and the tree's root is called the node's depth
+//Write function that takes in a BT and returns the sum of its node' depth.
+//Each BT node has int val, left, right child nodes. Children can be either be BT nodes themselves or Null.
