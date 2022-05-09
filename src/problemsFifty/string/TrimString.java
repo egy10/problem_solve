@@ -25,6 +25,8 @@ public class TrimString {
         System.out.println(result);
 
     }
+    // Java has trim(). also
+
 }
 // String s = "   hello   user  welcome     "
 // char a[] = s.toCharArray
