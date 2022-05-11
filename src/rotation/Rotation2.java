@@ -6,7 +6,7 @@ public class Rotation2 {
         int k = 2;
         System.out.println("Orginal array: ");
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i] + " ");
+            System.out.print(arr[i] + " ");
         }
         for (int i = 0; i < k; i++) { //Rotate the given array by n times
             int j, last;
@@ -19,7 +19,7 @@ public class Rotation2 {
         System.out.println();
         System.out.println("Array after right rotation");
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i] + " ");
+            System.out.print(arr[i] + " ");
         }
 
     }

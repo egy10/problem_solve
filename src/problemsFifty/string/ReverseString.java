@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class ReverseString {
     public static void main(String[] args) {
-        String result = "Hello User! Welcome to Coding!"; //Output: dlroW olleH
+        String result = "Hello World!"; //Output: !dlroW olleH
         System.out.println(reverseString(result));
         System.out.println(reverseStringTwo(result)); //Output: dlroW olleH
     }
