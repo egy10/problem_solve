@@ -3,6 +3,7 @@ package problemsFifty.string;
 import java.util.HashMap;
 import java.util.Map;
 
+//using sliding window
 public class LongestSubString {
     public static void main(String[] args) {
         String result = "abvcnvbvn";
