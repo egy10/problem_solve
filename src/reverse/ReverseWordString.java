@@ -9,7 +9,6 @@ public class ReverseWordString {
         String str = "Hello Mongolia, This is Enkhee";
         //output : Enkhee   is   This   Mongolia,   Hello
         System.out.println(reverseWord(str));
-
     }
     public static String reverseWord(String str){
         List<String> words = new ArrayList<>();
@@ -29,5 +28,4 @@ public class ReverseWordString {
         Collections.reverse(words);
         return String.join(" ", words);
     }
-
 }

@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class UnqueChar {
     public static void main(String[] args) {
-        String result = "Mongolia";
+        String result = "Mongoliamg";
         System.out.println(isUniqueChar(result));
     }
     public static char isUniqueChar(String s) {
